@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="css/datepicker.css" rel="stylesheet" type="text/css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/animate.css" rel="stylesheet">
+   
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+  *{margin:0; padding:0; box-sizing:border-box; }
+  
+	body {
+     font: 400 15px Lato, sans-serif;
+     line-height: 1.8;
+     color: #818181;
+	 background:#f7f7f7;	  }
+	.rooms,.gallery,.parts,.book,.comments,.newsletter{padding:5% 0;}
+	.line{margin:0 auto; border:solid 2px #d0aa69;width:70px;;margin-bottom:10px;}
+  
+  /*-------TOPBAR---------*/
+  .header-top{background:#d0aa69; color:#fff; z-index:9998}
+  .fa-map-marker,.fa-phone,.fa-share-alt{display:block;}
+  .social-icons{list-style:none;}
+  .social-icons li{float:left; margin-left:3%}
+  .social-icons li a{color:#fff; text-decoration: none;}
+  
+  /*-------HEADER---------*/
+  header{background:#fff; box-shadow: 0px 5px 20px #b3b3b3; z-index:9999; position:fixed; width:100%;}
+  .navbar{
+    background-color: #fff;
+    z-index: 9999;
+    border: 0;
+    border-radius: 0;
+	margin-bottom:-5px;
+	padding-top:1%;
+    }
+   .navbar-nav li.active a {
+	border-bottom:2px solid #d0aa69;
+	}
+   .navbar-nav li a:hover, .navbar-nav li.active a {
+    color:#d0aa69 !important;
+    background-color: #fff !important; 
+    }
+   .nav li a:before {
+	 content: "";
+	 position: absolute;
+	 z-index: -2;
+	 left: 0;
+	 right: 100%;
+	 top: 100%;
+	 background:#d0aa69 ; /*** COLOR OF THE LINE ***/
+	 height: 2px; /*** THICKNESS OF THE LINE ***/
+	 -webkit-transition-property: right;
+	 transition-property: right;
+	 -webkit-transition-duration: 0.3s;
+	 transition-duration: 0.3s;
+	 -webkit-transition-timing-function: ease-out;
+	 transition-timing-function: ease-out;
+    }
+    .nav li a:hover:before{
+	 right: 0;
+    }
+  
+    /*-- SLIDER --*/
+	.cycle-slideshow{width:100%;position:relative; margin:0 auto;}
+	.cycle-slideshow img{width:100%}	#prev{position:absolute;font-size:50px;top:50%;z-index:999;font-weight:bold;left:-20px;margin-top:-25px;cursor:pointer;transition:all 1s;opacity:0; color:#fff;}	#next{position:absolute;font-size:50px;top:50%;z-index:999;font-weight:bold;right:-20px;margin-top:-25px;cursor:pointer;transition:all 1s;opacity:0;color:#fff}
+	#prev:hover{color:#d0aa69;}
+	#next:hover{color:#d0aa69;}
+	.cycle-slideshow:hover #prev{left:10px; opacity:1;}
+	.cycle-slideshow:hover #next{right:10px; opacity:1;}
+	.cycle-slideshow { 
+    -webkit-perspective: 1000;
+    -webkit-transform-style: preserve-3d;
+    -moz-perspective: 1000;
+    -moz-transform-style: preserve-3d;
+    -o-perspective: 1000;
+    -o-transform-style: preserve-3d;
+    perspective: 1000;
+    transform-style: preserve-3d;  
+	}
+	
+	/*-- FORM --*/
+	#bookform{background:#fff;  box-shadow: 5px 5px 20px #b3b3b3; padding-bottom:100px; padding-top:10px; padding-right:2%; position:relative; top:-30px; z-index:999}
+	.btn2{background:#d0aa69; width:100%; margin:0 auto; color:#fff; transition:all 1s;}
+	.btn2:hover{background:#333; color:#fff;}
+	
+	/*-- ROOMS --*/
+	.rooms{background:#f7f7f7}
+    .book{
+	 color:#fff;
+	 background-image:url("images/paralax.jpg");
+	 background-repeat: no-repeat;
+	 background-size: 100% 100%;
+	 background-attachment: fixed;
+	 background-position: center; 
+	}
+	.special{
+     color: #b4b4b4;
+     font-style: italic;
+     float: left;
+    }
+	.padtext h4 a{color:#2a2a2a;}
+    h4 a:hover{color:#d0aa69; text-decoration: none;}
+   .bookn a{color:#d0aa69; text-decoration: none;}
+   .fa-long-arrow-right{margin-left:3px;}
+   .fa-info-circle{margin-right:3px;}
+   .box{ background-color:#fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-bottom:20px;}
+   .padtext{padding:2% 10%;}
+	@media screen and (max-width: 992px){
+	#slider-control img {
+	padding-top: 70px;
+	margin: 0 auto;
+	}
+	}
+	.carousel-showmanymoveone .carousel-control {
+	width: 60px;
+	background-image: none;
+	}
+	.carousel-showmanymoveone .carousel-control.left {
+	margin-left: 0px;
+	margin-top: 15%;
+	font-size:60px;
+	color:#d0aa69;
+	opacity:1;
+	}
+	.carousel-showmanymoveone .carousel-control.right {
+	margin-left: 0px;
+	margin-top: 15%;
+	font-size:60px;
+	color:#d0aa69;
+	opacity:1;
+	}
+	.carousel-showmanymoveone .cloneditem-1,
+	.carousel-showmanymoveone .cloneditem-2,
+	.carousel-showmanymoveone .cloneditem-3,
+	.carousel-showmanymoveone .cloneditem-4,
+	.carousel-showmanymoveone .cloneditem-5 {
+		display: none;
+	}
+	@media all and (min-width: 768px) {
+	.carousel-showmanymoveone .carousel-inner > .active.left,
+	.carousel-showmanymoveone .carousel-inner > .prev {
+    left: -50%;
+	}
+   .carousel-showmanymoveone .carousel-inner > .active.right,
+   .carousel-showmanymoveone .carousel-inner > .next {
+    left: 50%;
+   }
+  .carousel-showmanymoveone .carousel-inner > .left,
+  .carousel-showmanymoveone .carousel-inner > .prev.right,
+  .carousel-showmanymoveone .carousel-inner > .active {
+    left: 0;
+  }
+  .carousel-showmanymoveone .carousel-inner .cloneditem-1 {
+    display: block;
+	}
+	}
+	@media all and (min-width: 768px) and (transform-3d), all and (min-width: 768px) and (-webkit-transform-3d) {
+	.carousel-showmanymoveone .carousel-inner > .item.active.right,
+	.carousel-showmanymoveone .carousel-inner > .item.next {
+    -webkit-transform: translate3d(50%, 0, 0);
+    transform: translate3d(50%, 0, 0);
+    left: 0;
+	}
+  .carousel-showmanymoveone .carousel-inner > .item.active.left,
+  .carousel-showmanymoveone .carousel-inner > .item.prev {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+    left: 0;
+  }
+  .carousel-showmanymoveone .carousel-inner > .item.left,
+  .carousel-showmanymoveone .carousel-inner > .item.prev.right,
+  .carousel-showmanymoveone .carousel-inner > .item.active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    left: 0;
+	}
+	}
+	@media all and (min-width: 992px) {
+	.carousel-showmanymoveone .carousel-inner > .active.left,
+	.carousel-showmanymoveone .carousel-inner > .prev {
+    left: -33.33%;
+	}
+	.carousel-showmanymoveone .carousel-inner > .active.right,
+	.carousel-showmanymoveone .carousel-inner > .next {
+    left: 33.33%;
+	}
+  .carousel-showmanymoveone .carousel-inner > .left,
+  .carousel-showmanymoveone .carousel-inner > .prev.right,
+  .carousel-showmanymoveone .carousel-inner > .active {
+    left: 0;
+  }
+  .carousel-showmanymoveone .carousel-inner .cloneditem-1, 
+  .carousel-showmanymoveone .carousel-inner .cloneditem-2 {
+    display: block;
+	}
+	}
+	@media all and (min-width: 992px) and (transform-3d), all and (min-width: 992px) and (-webkit-transform-3d) {
+  .carousel-showmanymoveone .carousel-inner > .item.active.right,
+  .carousel-showmanymoveone .carousel-inner > .item.next {
+    -webkit-transform: translate3d(33.33%, 0, 0);
+    transform: translate3d(33.33%, 0, 0);
+    left: 0;
+  }
+  .carousel-showmanymoveone .carousel-inner > .item.active.left,
+  .carousel-showmanymoveone .carousel-inner > .item.prev {
+    -webkit-transform: translate3d(-33.33%, 0, 0);
+    transform: translate3d(-33.33%, 0, 0);
+    left: 0;
+  }  
+  .carousel-showmanymoveone .carousel-inner > .item.left,
+  .carousel-showmanymoveone .carousel-inner > .item.prev.right,
+  .carousel-showmanymoveone .carousel-inner > .item.active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    left: 0;
+	}
+	}
+	.fa-search{display:none;font-size:30px;}
+	.image-box{
+	position:relative;
+	overflow:hidden;
+	}
+	.image-box img{
+	transform:scale(1); 
+	transition:all 1s;
+	}
+	.image-box:hover img{transform:scale(1.3); opacity:0.5;}
+	.image-box:hover .fa-search {position:absolute; top:50%; left:50%; margin-top:-25px; margin-left:-25px; padding:20px; border-radius:50%; background:#d0aa69; color:white; display:block; }
+	
+	/*-- GALLERY --*/
+	.gallery{background:#fff}
+   .gall{margin:10% 0; border-radius:5%;}
+	@media screen and (max-width:992px){
+	.image:nth-child(1),.image:nth-child(2),.image:nth-child(3),
+	.image:nth-child(4),.image:nth-child(5),.image:nth-child(6){display:none;}
+	.place{padding-top:40px;}
+	}
+	@media screen and (max-width:768px){
+    .image:nth-child(1),.image:nth-child(2),.image:nth-child(3),.image:nth-child(4),.image:nth-child(5),
+    .image:nth-child(6),.image:nth-child(7),.image:nth-child(8){display:none;}
+	.place{padding-top:0px;}
+	}
+	.rooms h3,.gallery h3,.parts h3{text-align:center; color:#2a2a2a;}
+	.btn1{background:#d0aa69; color:#fff; transition:all 1s;}
+	.btn1:hover{background:#333; color:#fff;}
+	
+	/*-- PARTS --*/
+	.pictures{height:29%; width:30%; float:left; margin-right:1%; }
+	.box1{ background-color:#fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-bottom:20px;  display:inline-block; line-height: 1.3; }
+	par{float:left;}
+	a{display:block;}
+	.text{display:inline-block;width:69%; padding:10px;}
+	.text h4 a{color:#2a2a2a;}
+	.text h4 a:hover{color:#d0aa69;}
+	@media screen and (max-width:768px){
+	.text{width:100%; padding:10px;}
+	.pictures{height:100%; width:100%; margin-right:0%;}
+	}
+	.special1{
+    color: #b4b4b4;
+    font-style: italic;
+	float:left;
+    }	
+	.bookn1 {text-align:right; }	
+	.bookn1 a{color:#d0aa69;}
+	
+	.fa-search1{display:none;font-size:20px;}
+	.image-box1{
+	position:relative;
+	overflow:hidden;
+	}
+	.image-box1 img{
+	transform:scale(1); 
+	transition:all 1s;
+	}
+	.image-box1:hover img{transform:scale(1.1); opacity:0.5;}
+	.image-box1:hover .fa-search {position:absolute; top:50%; left:50%; margin-top:-15px; margin-left:-15px; padding:10px; border-radius:50%; background:#d0aa69; color:white; display:block; }
+	
+	/*-- BOOK NOW--*/
+	.btn3{border:1px solid #fff; color:#fff; background:rgba(208, 170, 105,0.3)}
+	.btn3:hover{border:1px solid #fff; color:#fff; background:rgba(208, 170, 105,0.7)}
+	
+	/*-- COMMENTS--*/
+	.customer{border-radius:50%; float:left; margin-top:1em;}
+	.cusname{font-weight:bold; color:#5b5b5b;}
+	.job{float:left; color:#b4b4b4;}	
+	.package{color:#d0aa69;}
+	.people{padding-top:2em;}
+	@media screen and (max-width:768px){
+	.customer{display:none;}
+	}
+	
+	/*-- MEMORIES--*/
+	.memories{
+	background-color: #f7f7f7;
+    background-image: url(images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    color: #515151;
+	padding:100px 0;
+	}
+	.fa-photo{margin-right:3px;}
+	.box2{height:330px;; width:100%; position:relative;}
+	.memory1{ display:inline-block; position:absolute; top:25%; left:25%;transition:all 1s;}
+	.box2:hover .memory1{ top:0%; left:0%; transform: rotate(-10deg)}
+	.memory2{ display:inline-block; position:absolute; top:25%; left:25%;transition:all 1s;}
+	.box2:hover .memory2{ top:0%; left:55%; transform: rotate(10deg)}
+	.memory3{ display:inline-block; position:absolute; top:25%; left:25%;transition:all 1s;}
+	.box2:hover .memory3{top:55%; left:0%; transform: rotate(-10deg)}
+	.memory4{ display:inline-block; position:absolute; top:25%; left:25%;transition:all 1s;}
+	.box2:hover .memory4{top:55%; left:55%; transform: rotate(-12deg)}
+	
+	/*---FOOTER---*/
+	footer{background:#2a2a2a; color:#fff;}
+	.menu li a{color:#fff; text-decoration: none; transition:all 1s;} 
+	.menu li:hover a{color:#d0aa69;margin-left:10px;} 
+	.menu{list-style-image: url('images/right.png');}
+	.form1{background:#373737; border:none;}
+	.btn3{background:#d0aa69; color:#fff;  border:none; transition:all 1s;}
+	.btn3:hover{background:#c2913d;  border:none;color:#fff;}
+	
+	/*----COPYRIGHT----*/
+	.copyright{text-align:center;background:#2a2a2a; color:#fff; border-top:1px solid #818181;}
+	.line1{border:solid 1px #d0aa69;width:70px;;margin-bottom:10px;}
+	.borderbottom{border-bottom:1px solid #818181;}
+	
+	
+	
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<section id="top">
+	<div  class="header-top">
+		<div class="container">
+			<div  class="top">
+				<div class="col-sm-4 col-xs-12">
+					<i class="fa fa-map-marker">
+					<label>address</label></i>
+					<div class="address"><strong>1234 Street Name, Porto, Envato</strong></div>
+				</div>
+				<div class="col-sm-3 col-xs-12">
+					<i class="fa fa-phone">
+					<label>call us</label></i>
+					<strong>(800) 1234-5678</strong>
+				</div>
+				<div class="col-sm-4 col-xs-12">
+					<i class="fa fa-share-alt">
+					<label>follow us</label></i>
+					<ul class="social-icons">
+						<li class="social-icons-instagram"><a href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fa fa-instagram"></i> <span>Instagram</span></a></li>
+						<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i> <span>Facebook</span></a></li>
+						<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i> <span>Twitter</span></a></li>
+					</ul>
+				</div>
+				<div class="col-sm-1 col-xs-12 col-flags">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //TOPBAR -->
+
+<!-- HEADER -->
+<header id="menu">
+	<div class="container">
+		<nav class="navbar navbar-default navbar-fixed">
+			<!-- LOGO -->
+			<div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 logo">
+				<div class="logo-image">
+					<a href="#" title="Porto">
+						<img class="logo-img" src="images/logo.png" alt="" />
+					</a>
+				</div>
+			</div>
+			<!-- //LOGO -->
+		    
+			<!-- //MAIN NAVIGATION -->
+			<div class="col-xs-6 col-sm-10 col-md-10 col-lg-10">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>                        
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">					
+						<li class="active"><a href="#">HOME</a></li>
+						<li><a href="#about">ABOUT</a></li>
+						<li><a href="#services">SERVICES</a></li>
+						<li><a href="#gallery">GALLERY</a></li>
+						<li><a href="#pricing">PRICING</a></li>
+						<li><a href="#contact">CONTACT</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- //MAIN NAVIGATION -->
+	</div>
+</header>
+<!-- //HEADER -->
+
+<!-- SLIDER -->
+<div id=outside>
+    <!-- slideshow -->
+    <div class="cycle-slideshow" 
+		data-cycle-fx="flipVert"
+		data-cycle-timeout=4000
+        data-cycle-prev="#prev"
+        data-cycle-next="#next"
+        >
+        <img src="images/slide1.jpg" alt="Los Angeles" style="width:100%;">
+		<img src="images/slide2.jpg" alt="Los Angeles" style="width:100%;">
+		<img src="images/slide3.jpg" alt="Los Angeles" style="width:100%;">
+		
+		<!-- prev/next links -->
+		<div class=center>
+        <span id=prev>&lt;</span>
+        <span id=next>&gt;</span>
+		</div>
+    </div>
+</div>
+<!-- //SLIDER -->
+
+<!-- FORM -->
+<div class="container">
+	<form id="bookform">
+		<div class="form-group col-md-2">
+			<label>Arrival Date</label>
+			<div class="input-group">
+				<input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" name="date">
+				<div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+			</div>
+		</div>
+		<div class="form-group col-md-2">
+			<label>Departure Date</label>
+			<div class="input-group">
+				<input type="text" class="datepicker form-control" placeholder="dd/mm/yyyy" name="date">
+				<div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+			</div>
+		</div>
+		<div class="form-group col-md-2">
+			<label>Rooms</label>
+			<select class="form-control">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+		</div> 
+		<div class="form-group col-md-2">
+			<label>Adults</label>
+			<select class="form-control">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+		</div> 
+		<div class="form-group col-md-2">
+			<label>Children</label>
+			<select class="form-control">
+				<option>0</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+		</div> 
+		<div class="col-md-2">
+			<br>
+			<button type="submit" class="btn btn2">check</button>
+		</div>
+	</form>
+</div>
+<!-- //FORM -->
+
+<!-- ROOMS -->
+<section class="rooms">
+    <div class="container">
+	<h3 class="text-center">The Rooms We Offer</h3>
+	<div class="line"></div>
+		<div class="carousel carousel-showmanymoveone slide" id="itemslider">
+			<div class="carousel-inner">
+
+				<div class="item active">
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="box">
+							<div class="image-box">
+								<a href="#">
+									<img src="images/room1.jpg" class="img-responsive center-block">
+									<i class="fa fa-search" aria-hidden="true"></i>
+								</a>
+							</div>
+							<div class="padtext"><h4><a>Standard Room</a></h4>
+							<div>Lorem ipsum dolor sit amet, conse adipiscing elit. Maecenas mauris orci, pellentesque at vestibulum quis, porttitor eget.</div>
+							<div class="special"><i class="fa fa-info-circle"></i>From $200/night</div>
+							<div class="bookn text-right"><a>Book Now<i class="fa fa-long-arrow-right"></i></a></div></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="item">
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="box">
+							<div class="image-box">
+								<a href="#">
+									<img src="images/room2.jpg" class="img-responsive center-block">
+									<i class="fa fa-search" aria-hidden="true"></i>
+								</a>
+							</div>		
+                            <div class="padtext"><h4><a>Deluxe Studio</a></h4>
+							<div>Lorem ipsum dolor sit amet, conse adipiscing elit. Maecenas mauris orci, pellentesque at vestibulum quis, porttitor eget.</div>
+							<div class="special"><i class="fa fa-info-circle"></i>From $250/night</div>
+							<div class="bookn text-right"><a>Book Now<i class="fa fa-long-arrow-right"></i></a></div></div>
+                        </div>
+					</div>
+				</div>
+				
+				<div class="item">
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="box">
+							<div class="image-box">
+								<a href="#">
+									<img src="images/room3.jpg" class="img-responsive center-block">
+									<i class="fa fa-search" aria-hidden="true"></i>
+								</a>
+							</div>	
+                            <div class="padtext"><h4><a>Luxury Sea House</a></h4>
+							<div>Lorem ipsum dolor sit amet, conse adipiscing elit. Maecenas mauris orci, pellentesque at vestibulum quis, porttitor eget.</div>
+							<div class="special"><i class="fa fa-info-circle"></i>From $350/night</div>
+							<div class="bookn text-right"><a>Book Now<i class="fa fa-long-arrow-right"></i></a></div></div>
+                        </div>
+					</div>
+				</div>
+				
+				<div class="item">
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="box">
+							<div class="image-box">
+								<a href="#">
+									<img src="images/room4.jpg" class="img-responsive center-block">
+									<i class="fa fa-search" aria-hidden="true"></i>
+								</a>
+							</div>
+                            <div class="padtext"><h4><a>Pool Terrace House</a></h4>
+							<div>Lorem ipsum dolor sit amet, conse adipiscing elit. Maecenas mauris orci, pellentesque at vestibulum quis, porttitor eget.</div>
+							<div class="special"><i class="fa fa-info-circle"></i>From $400/night</div>
+							<div class="bookn text-right"><a>Book Now<i class="fa fa-long-arrow-right"></i></a></div></div>
+                        </div>
+					</div>
+				</div>
+				
+				<div class="item">
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="box">
+							<div class="image-box">
+								<a href="#">
+									<img src="images/room5.jpg" class="img-responsive center-block">
+									<i class="fa fa-search" aria-hidden="true"></i>
+								</a>
+							</div>
+                            <div class="padtext"><h4><a>Deluxe Pool Studio</a></h4>
+							<div>Lorem ipsum dolor sit amet, conse adipiscing elit. Maecenas mauris orci, pellentesque at vestibulum quis, porttitor eget.</div>
+							<div class="special"><i class="fa fa-info-circle"></i>From $450/night</div>
+							<div class="bookn text-right"><a>Book Now<i class="fa fa-long-arrow-right"></i></a></div></div>
+                        </div>
+					</div>
+				</div>
+				
+				<div class="item">
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="box">
+							<div class="image-box">
+								<a href="#">
+									<img src="images/room6.jpg" class="img-responsive center-block">
+									<i class="fa fa-search" aria-hidden="true"></i>
+								</a>
+							</div>
+                            <div class="padtext"><h4><a>Luxury Sea Family House</a></h4>
+							<div>Lorem ipsum dolor sit amet, conse adipiscing elit. Maecenas mauris orci, pellentesque at vestibulum quis, porttitor eget.</div>
+							<div class="special"><i class="fa fa-info-circle"></i>From $500/night</div>
+							<div class="bookn text-right"><a>Book Now<i class="fa fa-long-arrow-right"></i></a></div></div>
+                        </div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div id="slider-control">
+				<a class="left carousel-control" href="#itemslider" data-slide="prev">&lt;</a>
+				<a class="right carousel-control" href="#itemslider" data-slide="next">&gt;</a>
+			</div>
+
+		</div>	
+	</div>
+</section>
+<!-- //ROOMS -->
+
+<!-- GALLERY -->
+<section class="gallery">
+	<div class="container">
+		<div class="col-md-6 col-sm-6">
+			
+				<div class="image col-md-4">
+					<div class="image-box1">
+					<a href="#"><img src="images/gallery1.jpg" class="gall img-responsive center-block"><i class="fa fa-search fa-search1" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="image col-md-4">
+					<div class="image-box1">
+					<a href="#"><img src="images/gallery2.jpg" class="gall img-responsive center-block"><i class="fa fa-search fa-search1" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="image col-md-4">
+					<div class="image-box1">
+					<a href="#"><img src="images/gallery3.jpg" class="gall img-responsive center-block"><i class="fa fa-search fa-search1" aria-hidden="true"></i></a>
+					</div>
+				</div>
+	
+				<div class="image col-md-4">
+					<div class="image-box1">
+					<a href="#"><img src="images/gallery4.jpg" class="gall img-responsive center-block"><i class="fa fa-search fa-search1" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="image col-md-4">
+					<div class="image-box1">
+					<a href="#"><img src="images/gallery5.jpg" class="gall img-responsive center-block"><i class="fa fa-search fa-search1" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="image col-md-4">
+					<div class="image-box1">
+					<a href="#"><img src="images/gallery6.jpg" class="gall img-responsive center-block"><i class="fa fa-search fa-search1" aria-hidden="true"></i></a>
+					</div>
+				</div>
+	
+				<div class="image col-md-4">
+					<div class="image-box1">
+					<a href="#"><img src="images/gallery7.jpg" class="gall img-responsive center-block"><i class="fa fa-search fa-search1" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="image col-md-4">
+					<div class="image-box1">
+					<a href="#"><img src="images/gallery8.jpg" class="gall img-responsive center-block"><i class="fa fa-search fa-search1" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="image col-md-4">
+					<div class="image-box1">
+					<a href="#"><img src="images/gallery9.jpg" class="gall img-responsive center-block"><i class="fa fa-search fa-search1" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			
+		</div>
+		<div class="place col-md-6 col-sm-6 text-center">
+			<h3>The Place You've Dreamed About</h3>
+			<div class="line"></div>
+			<p>Sed hendrerit quam sed ante euismod posu. Mauris ut elementum ante. Vestibuel suscipit convallis purus mattis magna sapien, euismod convallis sagittis quis euismod posu.Vivamus id mi non quam congue venenatis et at lorem. Ut ullamcorper odio id metus eleif tincidunt. Proin ante arcu, aliquam nec rhon sit amet, consequat vitae suscipit magna. Sed hendrerit quam sed ante euismod posu. Mauris ut elementum ante. Vivamus id mi non quam congue venenatis et at lorem. Ut ullamcorper odio id metus eleif tincidunt consequat vitae suscipit magna. Maecenas mauris orci, pellentesque at vestibulum quis.</p>
+			<button type="submit" class="btn btn1"><i class="fa fa-check-circle-o" style="margin-right:10px;"></i>Check it out now!</button>
+		</div>
+	</div>
+</section>
+<!-- //GALLERY -->
+
+<!-- PARTS-->
+<section class="parts">
+	<div class="container">
+		<h3 class="text-center">Enjoy Your Luxary Vacation</h3>
+		<div class="line"></div>
+		<p class="text-center">Sed hendrerit quam sed ante euismod posu. Mauris ut elementum ante. Vestibuel suscipit convallis purus mattis magna sapien, euismod convallis sagittis quis euismod posu.Vivamus id mi non quam congue venenatis et at lorem.</p>
+			
+		<div class="col-sm-12 col-sm-offset-0 col-md-6 col-xs-8 col-xs-offset-2">
+			<div class="box1 wow bounceInLeft" data-wow-offset="300">
+				<a><img class="pictures" src="images/image-feature1.jpg"  ></a>
+				<div class="text">
+					<h4><a href="#">Four À La Carte Restaurants</a></h4>
+					<p class="par">Lorem ipsum dolor sit amet, conse adipiscing elit. Maecenas mauris orci, pellentesque at vestibulum quis, porttitor eget.</p>
+					<p class="special1" ><i class="fa fa-clock-o"></i>19:00 - 24:00</p>
+					<div class="bookn1"><a target="_parent" href="#">Read More<i class="fa fa-long-arrow-right"></i></a></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-12 col-sm-offset-0 col-md-6 col-xs-8 col-xs-offset-2">
+			<div class="box1 wow bounceInLeft" data-wow-offset="300" data-wow-delay="0.5s" >
+				<a><img class="pictures" src="images/image-feature2.jpg"  ></a>
+				<div class="text">
+					<h4><a href="#">Relaxing SPA Center</a></h4>
+					<p class="par">Lorem ipsum dolor sit amet, conse adipiscing elit. Maecenas mauris orci, pellentesque at vestibulum quis, porttitor eget.</p>
+					<p class="special1" ><i class="fa fa-clock-o"></i>09:00 - 21:00</p>
+					<div class="bookn1"><a target="_parent" href="#">Read More<i class="fa fa-long-arrow-right"></i></a></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-12 col-sm-offset-0 col-md-6 col-xs-8 col-xs-offset-2">
+			<div class="box1 wow bounceInLeft" data-wow-offset="300"  >
+				<a><img class="pictures" src="images/image-feature3.jpg"  ></a>
+				<div class="text">
+					<h4><a href="#">Ultra Modern Fitness Center</a></h4>
+					<p class="par">Lorem ipsum dolor sit amet, conse adipiscing elit. Maecenas mauris orci, pellentesque at vestibulum quis, porttitor eget.</p>
+					<p class="special1" ><i class="fa fa-clock-o"></i>07:30 - 23:00</p>
+					<div class="bookn1"><a target="_parent" href="#">Read More<i class="fa fa-long-arrow-right"></i></a></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-12 col-sm-offset-0 col-md-6 col-xs-8 col-xs-offset-2">
+			<div class="box1 wow bounceInLeft" data-wow-offset="300" data-wow-delay="0.5s" >
+				<a><img class="pictures" src="images/image-feature4.jpg"  ></a>
+				<div class="text">
+					<h4><a href="#">Three Beach Bars and Disco Club</a></h4>
+					<p class="par">Lorem ipsum dolor sit amet, conse adipiscing elit. Maecenas mauris orci, pellentesque at vestibulum quis, porttitor eget.</p>
+					<p class="special1" ><i class="fa fa-clock-o"></i>18+ only</p>
+					<div class="bookn1"><a target="_parent" href="#">Read More<i class="fa fa-long-arrow-right"></i></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- //PARTS-->
+
+<!-- BOOK NOW-->
+<section class="book">
+	<div class="container text-center">
+		<h3>Enjoy the best of Porto</h3>
+		<p>Make your reservation right now with the best price</p>
+		<a class="btn btn3 text-uppercase" href="">Book Now</a>
+	</div>
+</section>
+<!-- //BOOK NOW-->
+
+<!-- COMMENTS-->
+<section class="comments">
+	<div class="container text-center">
+		<h3>What Our Guests Say</h3>
+		<div class="line"></div>
+	</div>
+	
+	<div class="people container">
+		<div class="col-md-6">
+			<img class="customer" alt="Alt Tag" src="images/customer1.jpg">
+			<div class="text">Proin ante purus, malesuada vel consectetur eget, ullamcorper id sem. Sed lacinia, orci a rhoncus dignissim, risus metus accumsan nulla, sit amet id mi non quam congue venenatis et at lorem.
+			<div class="cusname">Anthony Welch</div><span class="job">Marketing - </span><a class="package" target="_parent" href="#">Travel Inc.</a></div>
+		</div>
+
+		<div class="col-md-6">
+			<img class="customer" alt="Alt Tag" src="images/customer2.jpg">
+			<div class="text">Lorem ipsum dolor sit amet, conse adipiscing elit. Maecenas mauris orci, pellentesque at vestibulum quis, porttitor eget turpis lobortis nunc quis metus id mi non quam congue venenatis et at lorem.
+			<div class="cusname">Brian Thomson</div><span class="job">Sales Manager - </span><a class="package" target="_parent" href="#">Vacations Limited</a></div>
+		</div>
+
+		<div class="col-md-6">
+			<img class="customer" alt="Alt Tag" src="images/customer3.jpg">
+			<div class="text">In semper magna sed magna consectetur interdum nec et tortor. Duis lobortis nunc quis metus iaculis consequat tincidunt eros accumsan morbi id mi non quam congue venenatis et at lorem.
+			<div class="cusname">Victoria Christopher</div><span class="job">Designer - </span><a class="package" target="_parent" href="#">Holiday &amp; SPA</a></div>
+		</div>
+
+		<div class="col-md-6">
+			<img class="customer" alt="Alt Tag" src="images/customer4.jpg">
+			<div class="text">Donec tincidunt metus et lorem feugiat tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac felis enim. Maecenas ut quam eget nunc id mi non quam congue venenatis.
+			<div class="cusname">Gerry Brooks</div><span class="job">Accountant - </span><a class="package" target="_parent" href="#">Delivery &amp; Co</a></div>
+		</div>
+	</div>
+</section>
+<!-- //COMMENTS-->
+
+<!-- MEMORIES-->
+<section class="memories">
+	<div class="container">
+		<div class="col-md-6 text-center">
+			<h3>Memories From The Paradise</h3>
+			<div class="line"></div>
+			<p>Sed hendrerit quam sed ante euismod posu. Mauris ut elementum ante. Vestibuel suscipit convallis purus mattis magna sapien, euismod convallis sagittis quis euismod posu.Vivamus id mi non quam congue venenatis et at lorem. Ut ullamcorper odio id metus eleif tincidunt. Proin ante arcu, aliquam nec rhon sit amet, consequat vitae suscipit magna. Sed hendrerit quam sed ante euismod posu. Mauris ut elementum ante. Vivamus id mi non quam congue venenatis et at lorem. Ut ullamcorper odio id metus eleif tincidunt consequat vitae suscipit magna. Maecenas mauris orci, pellentesque at vestibulum quis.</p>
+			<a class="btn btn1" href="#" target="_parent"><i class="fa fa-photo"></i>Browse More Photos</a>
+		</div>
+		<div class="col-md-6">
+			<div class="box2">
+<div class="memory1">
+<img alt="" src="images/gallery1.jpg" style="transform: rotate(17deg); width:250px; border:6px solid #fff;  "></div>
+<div class="memory2">
+<img alt="" src="images/gallery2.jpg" style="transform: rotate(-20deg); width:250px; border:6px solid #fff; "></div>
+<div class="memory3">
+<img alt="" src="images/gallery3.jpg" style="transform: rotate(-6deg);width:250px; border:6px solid #fff; "></div>
+<div class="memory4">
+<img alt="" src="images/gallery4.jpg" style="transform: rotate(25deg);width:250px; border:6px solid #fff;  "></div>
+</div>
+		</div>
+	</div>
+</section>
+<!-- //MEMORIES-->
+
+<!--- FOOTER----->
+<footer>
+<div class="container">
+<div class="col-md-3">
+<h3>Get in Touch</h3>
+<div class="line1"></div>
+<i class="fa fa-map-marker">
+				<label>address</label></i>
+				<strong>1234 Street Name, Porto, Envato</strong>
+				<i class="fa fa-phone">
+				<label>call us</label></i>
+				<strong>(800) 1234-5678</strong>
+				<i class="fa fa-share-alt">
+				<label>follow us</label></i>
+				<ul class="social-icons">
+					<li class="social-icons-instagram"><a href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fa fa-instagram"></i> <span>Instagram</span></a></li>
+					<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i> <span>Facebook</span></a></li>
+					<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i> <span>Twitter</span></a></li>
+				</ul>
+</div>
+<div class="col-md-3">
+<h3>Map</h3>
+<div class="line1"></div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6417.630870044686!2d25.374140632207872!3d36.46201638001957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1499cc7ff7fea345%3A0x2cc3b17444b98ad4!2zzp3Ouc66LiDOnc6_zrzOuc66zr_PjSwgzp_Or86xIDg0NyAwMg!5e0!3m2!1sel!2sgr!4v1498657487224" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<div class="col-md-3">
+<h3>Newsletter</h3>
+<div class="line1"></div>
+<p class="text-light">Stay tuned with our latest news!</p>
+<form>
+  <div class="form-group">
+ 
+    <input type="text" placeholder="Name" class="form-control form1" >
+  </div>
+  <div class="form-group">
+    
+    <input type="email" placeholder="E-mail" class="form-control form1" >
+  </div>
+  <button type="submit" class="btn btn3">Subscribe </button>
+</form>
+</div>
+<div class="col-md-3">
+<h3>Useful Links</h3>
+<div class="line1"></div>
+<ul class="menu">					
+						<li><a href="#">Terms &amp; Conditions</a></li>
+						<li><a href="#">Company Information</a></li>
+						<li><a href="#">Support Forums</a></li>
+						<li><a href="#">Documentation</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Our Partners</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+</div>
+</div>
+</footer>
+<!--//FOOTER-->
+
+<!----COPYRIGHT---->
+<section class="copyright">
+© Copyright 2017. All Rights Reserved.
+</section>
+<!----//COPYRIGHT---->
+<script src="js/jquery.cycle2.min.js"></script>
+ <script src="js/jquery.cycle2.flip.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+<script src="js/wow.min.js"></script>
+	  
+
+<script>
+new WOW().init();
+
+$(function(){
+
+$('.datepicker').datepicker({
+    format: "dd/mm/yyyy",
+    startDate: "today",
+    todayHighlight: true
+});
+});
+
+$(document).ready(function(){
+
+$('#itemslider').carousel({ interval: 3000 });
+
+$('.carousel-showmanymoveone .item').each(function(){
+var itemToClone = $(this);
+
+for (var i=1;i<6;i++) {
+itemToClone = itemToClone.next();
+
+if (!itemToClone.length) {
+itemToClone = $(this).siblings(':first');
+}
+
+itemToClone.children(':first-child').clone()
+.addClass("cloneditem-"+(i))
+.appendTo($(this));
+}
+});
+});
+
+
+//effect menou
+window.onscroll=A;
+function A(){
+	var y=window.pageYOffset;
+	var top=document.getElementById('top');
+	var bottom=document.getElementById('middle');
+	if (y>50)
+	{
+	top.style.display="none";
+	bottom.style.position="fixed";
+	
+	
+	} 
+	else 
+	{
+	top.style.display="block";
+	bottom.style.position="fixed";
+	
+	}
+
+}
+</script>
+</body>
+</html>
